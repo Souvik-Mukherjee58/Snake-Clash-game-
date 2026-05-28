@@ -113,7 +113,3 @@ python snakes.py
 - Pygame
 
 ---
-
-# ❤️ Author
-
-Made with Python and Pygame.
