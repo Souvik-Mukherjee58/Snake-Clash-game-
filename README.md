@@ -1,96 +1,121 @@
-# Snake Clash 🚀🐍
+<div align="center">
 
-An arcade-style, space-themed Snake game built using Python and the `pygame` library. Guide your snake through space, consume different types of food to increase your score, avoid crashing into yourself or the walls, and aim for the ultimate high score!
+# 🐍 Snake Clash
 
----
+**An arcade-style Snake game built with Python and Pygame**
 
-# 🌟 Features
+[![Python](https://img.shields.io/badge/Python-3.7+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Pygame](https://img.shields.io/badge/Pygame-2.x-00B140?style=for-the-badge&logo=python&logoColor=white)](https://www.pygame.org/)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Mac%20%7C%20Linux-lightgrey?style=for-the-badge)](https://github.com/)
 
-## Diverse Food Types
+*Guide your snake through the arena, hunt rare food, and beat the high score — one bite at a time.*
 
-- ⚫ **Normal Food (Black)**  
-  Regular food that awards **10 points**.
+[Report Bug](https://github.com/yourusername/snake-clash/issues) · [Request Feature](https://github.com/yourusername/snake-clash/issues)
 
-- 🔴 **Bonus Food (Red)**  
-  Rare item that awards **50 points**.
-
-- 🔵 **Slow Food (Blue)**  
-  Slows down the game speed for easier maneuvering.
+</div>
 
 ---
 
-## 🎨 Visual Highlights
+## 🎮 See It In Action
 
-- Smooth background visuals
-- Distinct snake colors
-  - 🟢 Green snake head with eyes
-  - 🟡 Yellow snake body
-- Rounded borders for cleaner graphics
+#### 🏠 Welcome Screen
 
----
+<img width="1328" height="900" alt="Screenshot 2026-06-11 123217" src="https://github.com/user-attachments/assets/9259c8e3-a1f1-49d1-b6a0-79f03835e458" />
 
-## 🔊 Sound Effects
+#### 🕹️ Gameplay
 
-- Eating sound effect
-- Game over sound effect
+<img width="1329" height="900" alt="Screenshot 2026-06-11 123304" src="https://github.com/user-attachments/assets/7ee451cf-2991-4fd1-b530-278dfe1a074d" />
+
 
 ---
 
-## 💾 Persistent Tracking
+## ✨ Features
 
-- High-score system using `hiscore.txt`
-
----
-
-## 🎮 Gameplay Functions
-
-- Pause and resume support
-- Instant restart after game over
+- 🟢 Classic Snake gameplay with a **smooth, arcade feel**
+- 🍱 **Three food types** with unique effects and point values
+- 💾 **Persistent high score** saved across sessions
+- ⏸️ **Pause & resume** support mid-game
+- 🔊 **Sound effects** for eating and game over
+- 🎨 Snake skin **textured background** with rounded snake segments
 
 ---
 
-# 🕹️ Controls
+## 🍱 Food Types
+
+| Food | Color | Points | Effect |
+|------|-------|:------:|--------|
+| Normal Food | ⚫ Black | +10 | Snake grows |
+| Bonus Food | 🔴 Red | +50 | Snake grows (rare spawn) |
+| Slow Food | 🔵 Blue | +10 | Reduces game speed temporarily |
+
+---
+
+## 🕹️ Controls
 
 | Key | Action |
-|------|--------|
-| `SPACEBAR` | Start the game |
-| `ARROW KEYS` | Move the snake |
+|-----|--------|
+| `SPACE` | Start game |
+| `↑ ↓ ← →` | Steer the snake |
 | `P` | Pause / Resume |
-| `ENTER` | Restart after Game Over |
+| `ENTER` | Restart after game over |
 
 ---
 
-# 🛠️ Requirements & Installation
+## 🛠️ Built With
 
-Before running the game, make sure Python is installed on your system.
+| Technology | Purpose |
+|------------|---------|
+| Python 3.7+ | Core game logic & loop |
+| Pygame 2.x | Rendering, input & audio |
 
-You also need the `pygame` library.
+---
 
-## 📦 Install Dependencies
+## 📁 Project Structure
 
-Open terminal or command prompt and run:
+```
+snake-clash/
+├── snakes.py         # Main game script
+├── snake_bg.jpg      # Background texture image
+├── eat.mp3           # Eat sound effect
+├── game_over.mp3     # Game over sound effect
+└── hiscore.txt       # Auto-generated high score file
+```
+
+> `hiscore.txt` is created automatically on first run. The three asset files must sit in the same folder as `snakes.py`.
+
+---
+
+## ⚙️ Installation & Setup
+
+### Prerequisites
+
+- Python `3.7+`
+- Pygame library
+
+---
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/snake-clash.git
+cd snake-clash
+```
+
+### 2️⃣ Install Dependencies
 
 ```bash
 pip install pygame
 ```
 
----
+### 3️⃣ Add Assets
 
-# 📁 Assets Needed
+Place the following files in the project root alongside `snakes.py`:
 
-Make sure the following files are present in the **root directory** alongside your Python script:
+- `snake_bg.jpg` — background image
+- `eat.mp3` — eating sound
+- `game_over.mp3` — game over sound
 
-- `snake_bg.jpg` — Background image
-- `eat.mp3` — Sound played when eating food
-- `game_over.mp3` — Sound played on losing
-
----
-
-# 🚀 How to Run the Game
-
-1. Clone or download this repository
-2. Place all required asset files in the project folder
-3. Run the game using:
+### 4️⃣ Run the Game
 
 ```bash
 python snakes.py
@@ -98,18 +123,17 @@ python snakes.py
 
 ---
 
-# 🧠 Game Logic
+## 🧠 Game Logic
 
-- Snake grows after eating food
-- Collision with walls ends the game
-- Collision with itself ends the game
-- Different foods provide different gameplay effects
-
----
-
-# 🛠️ Built With
-
-- Python
-- Pygame
+- The snake moves continuously in the last pressed direction
+- Eating any food grows the snake by **5 segments**
+- **Bonus Food** is rare — grab it fast for 50 points
+- **Slow Food** drops the speed temporarily, giving breathing room
+- Hitting a **wall** or your **own body** ends the game
+- High score is saved to `hiscore.txt` and loaded on the next run
 
 ---
+
+## ⭐ Support
+
+If you enjoyed this project, consider giving it a **⭐ star** on GitHub!
